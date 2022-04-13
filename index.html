@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Films - Survey Form</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title" id="title">World of <span class="header__title--black">Films</span></h1>
+        <p class="header__paragraph" id="description">Please answer a few questions about your taste in movies. We want to get to know you!</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <form id="survey-form">
+                <section class="card__section">
+                    <h2 class="card__title">First, let's get a little personal</h2>
+
+                    <label for="name" class="card__info-label" id="name-label">Name:
+                        <input type="text" placeholder="ex: Pablo David" name="userName" class="card__info-input" id="name" required>
+                    </label>
+
+                    <label for="email" class="card__info-label" id="email-label">Email:
+                        <input type="email" placeholder="example@email.com" name="userEmail" class="card__info-input" id="email" required>
+                    </label>
+
+                    <p class="card__spam-paragraph">(We hate spam too, so don't worry, we won't send you any of that junk)</p>
+
+                    <label for="number" class="card__info-label" id="number-label">Age (optional):
+                        <input type="number" placeholder="ex: 26" name="userAge" min="10" max="99" class="card__info-input" id="number">
+                    </label>
+
+                    <label for="dropdown" class="card__info-label">Select the option that best describes your current role:
+                        <select name="userRole" class="card__info-input" id="dropdown" required>
+                            <option value="" disabled selected hidden>Select your role</option>
+                            <option value="student">Student</option>
+                            <option value="partJob">Part Time Job</option>
+                            <option value="fullJob">Full Time Job</option>
+                            <option value="preferNot">Prefer not to say</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                </section>
+
+                <hr class="card__break">
+
+                <section class="card__section">
+                    <h2 class="card__title">Now, let's talk about movies</h2>
+
+                    <fieldset class="card__fieldset">
+                        <legend class="card__question">How often do you watch movies?</legend>
+
+                        <div class="card__grid-layout">
+                            <label for="extremely" class="card__choice-label">
+                                <input type="radio" name="howOften" value="extremely" id="extremely">Extremely often
+                            </label>
+
+                            <label for="very" class="card__choice-label">
+                                <input type="radio" name="howOften" value="very" id="very">Very often
+                            </label>
+
+                            <label for="moderately" class="card__choice-label">
+                                <input type="radio" name="howOften" value="moderately" id="moderately">Moderately often
+                            </label>
+
+                            <label for="slightly" class="card__choice-label">
+                                <input type="radio" name="howOften" value="slightly" id="slightly">Slightly often
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="card__fieldset">
+                        <legend class="card__question">Where do you prefer to watch a movie?</legend>
+
+                        <div class="card__grid-layout">
+                            <label for="movie-theater" class="card__choice-label">
+                                <input type="radio" name="favPlace" value="movieTheater" id="movie-theater">Movie Theater
+                            </label>
+
+                            <label for="streaming-service" class="card__choice-label">
+                                <input type="radio" name="favPlace" value="streamingService" id="streaming-service">Streaming Service
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="card__fieldset">
+                        <legend class="card__question">What are your favorite types of movies? (check all that apply)</legend>
+
+                        <div class="card__grid-layout">
+                            <label for="action-adventure" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="actionAdventure" id="action-adventure">Action/Adventure
+                            </label>
+
+                            <label for="animation" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="animation" id="animation">Animation
+                            </label>
+
+                            <label for="comedy" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="comedy" id="comedy">Comedy
+                            </label>
+
+                            <label for="drama" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="drama" id="drama">Drama
+                            </label>
+
+                            <label for="fantasy" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="fantasy" id="fantasy">Fantasy
+                            </label>
+
+                            <label for="historical" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="historical" id="historical">Historical
+                            </label>
+
+                            <label for="horror" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="horror" id="horror">Horror
+                            </label>
+
+                            <label for="musical" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="musical" id="musical">Musicals
+                            </label>
+
+                            <label for="romance" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="romance" id="romance">Romance
+                            </label>
+
+                            <label for="science-fiction" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="scienceFiction" id="science-fiction">Science Fiction
+                            </label>
+
+                            <label for="thriller" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="thriller" id="thriller">Thriller
+                            </label>
+
+                            <label for="western" class="card__choice-label">
+                                <input type="checkbox" name="favGenre" value="western" id="western">Western
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="card__fieldset">
+                        <legend class="card__question">What is the most important element for you in a movie?</legend>
+
+                        <div class="card__grid-layout">
+                            <label for="script" class="card__choice-label">
+                                <input type="radio" name="importantElement" value="script" id="script">Script
+                            </label>
+
+                            <label for="characters" class="card__choice-label">
+                                <input type="radio" name="importantElement" value="characters" id="characters">Characters
+                            </label>
+
+                            <label for="acting" class="card__choice-label">
+                                <input type="radio" name="importantElement" value="acting" id="acting">Acting
+                            </label>
+
+                            <label for="timing" class="card__choice-label">
+                                <input type="radio" name="importantElement" value="timing" id="timing">Timing
+                            </label>
+
+                            <label for="soundtrack" class="card__choice-label">
+                                <input type="radio" name="importantElement" value="soundtrack" id="soundtrack">Soundtrack
+                            </label>
+
+                            <label for="visuals" class="card__choice-label">
+                                <input type="radio" name="importantElement" value="visuals" id="visuals">Visuals
+                            </label>
+                        </div>
+                    </fieldset>
+                </section>
+
+                <hr class="card__break">
+
+                <div class="card__flex-layout">
+                    <label for="comment-area" class="card__comment-label">
+                        If you have any additional comments or you want to tell us about <br> that masterful film you love, feel free to do so below!
+                    </label>
+                    <textarea placeholder="Enter your comment here..." name="userComment" class="card__comment-input" id="comment-area" cols="30" rows="8"></textarea>
+                </div>
+
+                <p class="card__thanks-paragraph">Thank you for taking the time to complete this survey!</p>
+
+                <button type="submit" class="card__button" id="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__author">This page was coded by Pablo David</p>
+        <a href="https://github.com/method1c4l"><img class="footer__github-img" src="./img/github-logo.png" alt="GitHub Logo"></a>
+    </footer>
+</body>
+
+</html>

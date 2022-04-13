@@ -1,0 +1,200 @@
+:root {
+    --font-color: #fff;
+    --neon-style-color: hsl(280, 65%, 50%);
+    --input-background-color: rgba(255, 255, 255, .1);
+    font-size: 62.5%; /* 62.5% of 16px(default font-size) = 10px -> 1rem (1:1) */
+}
+
+body {
+    background: linear-gradient(90deg, rgba(30, 0, 0, .7), rgba(0, 30, 30, .7)), url(../img/movie-theater-background-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--font-color);
+    text-shadow: 0 0 10px var(--neon-style-color);
+    text-align: center;
+    margin: 0;
+}
+
+
+/* ==================== HEADER ==================== */
+.header {
+    margin: 3.5rem 0 2.5rem;
+}
+
+.header__title {
+    font-size: 4.3rem;
+    text-transform: uppercase;
+}
+
+.header__title,
+.header__paragraph,
+.card__thanks-paragraph {
+    margin: 2rem 0;
+}
+
+.header__title--black {
+    background-color: #fff;
+    box-shadow: 0 0 3px #fff;
+    color: hsl(0, 0%, 10%);
+    text-shadow: 0 0 3px hsl(0, 0%, 10%);
+    padding: 0 1.5rem 0 .5rem;
+}
+
+
+/* ==================== MAIN ==================== */
+.card {
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 5px;
+    max-width: 71rem;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.card__section {
+    margin: 1.5rem 0 5.5rem;
+}
+
+.card__title {
+    font-size: 2.7rem;
+    margin: 0 0 3rem;
+}
+
+.header__paragraph,
+.card__info-label,
+.card__question,
+.card__choice-label,
+.card__comment-label,
+.card__thanks-paragraph {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+.card__break {
+    border: 1px solid #fff;
+    max-width: 27.5rem;
+    opacity: .3;
+    margin-bottom: 3rem;
+}
+
+
+/* ~~~~~~~~~~ INPUT FIELD ~~~~~~~~~~ */
+.card__info-label {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin: 3rem 3rem 0;
+}
+
+.card__info-input,
+.card__comment-input {
+    background-color: var(--input-background-color);
+    border: 0;
+    border-bottom: 1px solid var(--neon-style-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--font-color);
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+}
+
+.card__spam-paragraph {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin: 0 0 1.5rem;
+}
+
+
+/* ~~~~~~~~~~ RADIO & CHECKBOX ~~~~~~~~~~ */
+.card__fieldset {
+    border: 1px solid var(--neon-style-color);
+    border-radius: 5px;
+    margin: 3rem;
+    padding: 2rem;
+}
+
+.card__question {
+    padding: 0 1rem;
+}
+
+.card__grid-layout {
+    display: grid;
+    grid-auto-rows: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Responsive Grid */
+    margin-left: 5%;
+}
+
+.card__choice-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    transform: scale(1.2);
+    margin: 1.1rem .7rem;
+}
+
+
+/* ~~~~~~~~~~ COMMENT AREA ~~~~~~~~~~ */
+.card__flex-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__comment-input {
+    margin: 3rem;
+    resize: none;
+}
+
+
+/* ~~~~~~~~~~ BUTTON ~~~~~~~~~~ */
+.card__button {
+    background-color: var(--input-background-color);
+    border: 1px solid var(--neon-style-color);
+    border-radius: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--neon-style-color);
+    text-shadow: 0 0 5px #000;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: .9rem;
+    transition: all 300ms;
+}
+
+.card__button:hover {
+    background-color: var(--neon-style-color);
+    color: var(--font-color);
+}
+
+
+/* ==================== FOOTER ==================== */
+.footer {
+    margin-bottom: 1.5rem;
+}
+
+.footer__author {
+    font-size: 1.5rem;
+    font-family: monospace;
+    line-height: 2.5rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.footer__github-img {
+    width: 3.5rem;
+    transition: transform 500ms;
+}
+
+.footer__github-img:hover {
+    transform: scale(1.3);
+}
